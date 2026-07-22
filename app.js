@@ -105,7 +105,7 @@ function initScrollAnimations() {
    ========================================== */
 function initActiveNavLinks() {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .mobile-bar-item');
 
     window.addEventListener('scroll', () => {
         let currentSectionId = '';
