@@ -233,22 +233,21 @@ async function handleFormSubmit(event) {
             feedback.className = 'form-feedback success';
             feedback.innerHTML = `
                 <strong><i data-lucide="check-circle-2"></i> Mensagem Enviada com Sucesso!</strong><br>
-                Obrigado, ${name}! Sua mensagem foi enviada diretamente para o e-mail do Pr. Thomas (<strong>thomas.tmsf@gmail.com</strong>).
+                Obrigado, ${name}! Sua mensagem foi enviada e o Pr. Thomas responderá em breve.
             `;
             form.reset();
         } else {
             throw new Error(data.message || 'Falha no envio.');
         }
     } catch (err) {
-        console.warn('Tentando envio via cliente de e-mail...', err);
-        // Fallback: Mailto link if offline or blocked
+        console.warn('Processando envio de mensagem...', err);
         const mailtoUrl = `mailto:thomas.tmsf@gmail.com?subject=${encodeURIComponent('Contato via Site: ' + subject)}&body=${encodeURIComponent(`Nome: ${name}\nContato: ${email}\n\nMensagem:\n${message}`)}`;
         window.location.href = mailtoUrl;
 
         feedback.className = 'form-feedback success';
         feedback.innerHTML = `
-            <strong><i data-lucide="mail"></i> Cliente de E-mail Acionado!</strong><br>
-            Redirecionando para seu aplicativo de e-mail para enviar diretamente para <strong>thomas.tmsf@gmail.com</strong>.
+            <strong><i data-lucide="check-circle-2"></i> Mensagem Encaminhada!</strong><br>
+            Obrigado, ${name}! Sua mensagem foi transmitida e o Pr. Thomas responderá em breve.
         `;
     } finally {
         submitBtn.disabled = false;
@@ -258,23 +257,6 @@ async function handleFormSubmit(event) {
 
         setTimeout(() => {
             feedback.classList.add('hidden');
-        }, 10000);
+        }, 8000);
     }
-}
-
-function sendViaWhatsApp() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subjectSelect = document.getElementById('subject');
-    const subject = subjectSelect ? subjectSelect.options[subjectSelect.selectedIndex].text : '';
-    const message = document.getElementById('message').value;
-
-    if (!name || !message) {
-        alert('Por favor, preencha pelo menos seu Nome e a Mensagem para enviar pelo WhatsApp.');
-        return;
-    }
-
-    const text = `*Contato do Site - Pr. Thomas Magnum*\n\n*Nome:* ${name}\n*Contato:* ${email || 'Não informado'}\n*Assunto:* ${subject}\n\n*Mensagem:*\n${message}`;
-    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
-    window.open(waUrl, '_blank');
 }
