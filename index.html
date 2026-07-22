@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pr. Thomas Magnum | Pastor Distrital & Analista de Sistemas</title>
+    <meta name="description" content="Portfólio de Thomas Magnum: Pastor Distrital da IASD e Analista de Sistemas dedicado a criar soluções tecnológicas inovadoras e Inteligência Artificial a serviço da missão e do ministério pastoral.">
+    <meta name="keywords" content="Thomas Magnum, Pastor Distrital, IASD, Analista de Sistemas, Inteligência Artificial, Recepção Acolhedora, Ministério Pastoral, UNEB, SALT-IAENE">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pr. Thomas Magnum | Tecnologia e Propósito para a Missão">
+    <meta property="og:description" content="Pastor Distrital (IASD) e Analista de Sistemas unindo fé, tecnologia e Inteligência Artificial a serviço do Reino de Deus.">
+    <meta property="og:image" content="./imagens site/foto-thomas-hero.jpeg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- BACKGROUND GLOW EFFECTS -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-logo">
+                <div class="logo-icon-wrapper">
+                    <i data-lucide="cross" class="logo-cross-icon"></i>
+                    <i data-lucide="code-2" class="logo-code-icon"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Thomas Magnum</span>
+                    <span class="logo-title">Pastor & Systems Analyst</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Início</a>
+                <a href="#sobre" class="nav-link">Sobre Mim</a>
+                <a href="#portfolio" class="nav-link">Sistemas & IA</a>
+                <a href="#pilares" class="nav-link">Pilares</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Alternar Tema" title="Alternar Modo Escuro / Claro">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <a href="#portfolio" class="btn btn-primary btn-sm btn-glow hide-mobile">
+                    <span>Ver Projetos</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir Menu">
+                    <i data-lucide="menu" class="menu-open"></i>
+                    <i data-lucide="x" class="menu-close"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content fade-in-up">
+                    <div class="badge badge-amber">
+                        <i data-lucide="sparkles"></i>
+                        <span>Tecnologia a Serviço do Reino</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Unindo <span class="text-gradient-gold">Tecnologia</span> e <span class="text-gradient-blue">Propósito</span> para Expandir a Missão
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Servindo a Deus como Pastor Distrital na IASD e desenvolvendo soluções tecnológicas inovadoras baseadas em Inteligência Artificial para fortalecer a igreja local, cuidar das pessoas e acelerar a pregação do Evangelho.
+                    </p>
+
+                    <div class="hero-ctas">
+                        <a href="#portfolio" class="btn btn-primary btn-lg btn-glow">
+                            <i data-lucide="layout-grid"></i>
+                            <span>Conhecer Projetos</span>
+                        </a>
+                        <a href="#sobre" class="btn btn-outline btn-lg">
+                            <i data-lucide="user"></i>
+                            <span>Conhecer Minha História</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-pills">
+                        <div class="pill-item">
+                            <i data-lucide="church" class="pill-icon"></i>
+                            <span>Pastor Distrital IASD</span>
+                        </div>
+                        <div class="pill-divider"></div>
+                        <div class="pill-item">
+                            <i data-lucide="terminal" class="pill-icon"></i>
+                            <span>Bacharel em Sist. de Informação</span>
+                        </div>
+                        <div class="pill-divider"></div>
+                        <div class="pill-item">
+                            <i data-lucide="cpu" class="pill-icon"></i>
+                            <span>Especialista em IA Pastoral</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual fade-in-up delay-2">
+                    <div class="hero-card-frame">
+                        <div class="hero-image-wrapper" data-slot="foto-thomas-hero">
+                            <img src="./imagens site/foto-thomas-hero.jpeg" alt="Pr. Thomas Magnum - Pastor Distrital e Analista de Sistemas" loading="lazy" class="hero-img">
+                            <div class="hero-img-overlay"></div>
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="hero-float-badge float-top-right">
+                            <div class="badge-icon-box bg-gold">
+                                <i data-lucide="heart-handshake"></i>
+                            </div>
+                            <div class="badge-text-box">
+                                <span class="badge-num">+8 Anos</span>
+                                <span class="badge-lbl">Ministério Pastoral</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-float-badge float-bottom-left">
+                            <div class="badge-icon-box bg-blue">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <div class="badge-text-box">
+                                <span class="badge-num">IA & Código</span>
+                                <span class="badge-lbl">Soluções para a Igreja</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTATÍSTICAS / BANNER DE IMPACTO -->
+        <section class="stats-banner">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">2014</span>
+                        <span class="stat-label">Sistemas de Informação (UNEB)</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="book-open-check"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">2017</span>
+                        <span class="stat-label">Bacharel em Teologia (SALT-IAENE)</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">Assoc. Bahia Central</span>
+                        <span class="stat-label">Pastor Distrital em Feira de Santana</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i data-lucide="sparkles"></i>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-number">2026</span>
+                        <span class="stat-label">Pós-Graduação em IA para o Ministério</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE MIM / HISTÓRIA & TIMELINE -->
+        <section class="section sobre-section" id="sobre">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-blue">
+                        <i data-lucide="history"></i>
+                        <span>Trajetória & Vocação</span>
+                    </div>
+                    <h2 class="section-title">Uma Jornada Guiada pela <span class="text-gradient-gold">Fé e Inovação</span></h2>
+                    <p class="section-subtitle">
+                        Conheça os passos que uniram a análise de sistemas ao pastoreio, colocando o conhecimento técnico ao serviço de almas.
+                    </p>
+                </div>
+
+                <!-- Timeline Grid Structure -->
+                <div class="timeline-wrapper">
+                    <!-- TIMELINE ITEM 1 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot">
+                            <i data-lucide="graduation-cap"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2014</div>
+                            <h3 class="timeline-title">Formação em Sistemas & Serviço Público</h3>
+                            <p class="timeline-desc">
+                                Graduado em Bacharelado em Sistemas de Informação pela <strong>Universidade do Estado da Bahia (UNEB)</strong>. Atuou como servidor público na Prefeitura Municipal de Salvador, onde trabalhou ao lado de sua esposa <strong>Maiana Costa</strong> (Fisioterapeuta especialista em Neonatal, Pediatria, Pilates e RPG).
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">UNEB</span>
+                                <span class="tag">Sistemas de Informação</span>
+                                <span class="tag">Prefeitura de Salvador</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE ITEM 2 -->
+                    <div class="timeline-item fade-in-up">
+                        <div class="timeline-dot">
+                            <i data-lucide="flame"></i>
+                        </div>
+                        <div class="timeline-card">
+                            <div class="timeline-year">2017</div>
+                            <h3 class="timeline-title">O Chamado Teológico & Ordenação</h3>
+                            <p class="timeline-desc">
+                                Em resposta ao chamado de Deus para o ministério em tempo integral, deixou a carreira pública para ingressar na faculdade de Teologia. Concluiu o Bacharelado em Teologia pelo <strong>SALT-IAENE (2017)</strong> e foi ordenado ao ministério pastoral da Igreja Adventista do Sétimo Dia.
+                            </p>
+                            <div class="timeline-tags">
+                                <span class="tag">SALT-IAENE</span>
+                                <span class="tag">Teologia</span>
+                                <span class="tag">Pastor Ordenado IASD</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE ITEM 3 (WITH IMAGE SLOT) -->
+                    <div class="timeline-item timeline-with-img fade-in-up">
+                        <div class="timeline-dot">
+                            <i data-lucide="church"></i>
+                        </div>
+                        <div class="timeline-card flex-card">
+                            <div class="timeline-content-side">
+                                <div class="timeline-year">2018 - Presente</div>
+                                <h3 class="timeline-title">Trajetória Ministerial & Atuação Pastoral</h3>
+                                <ul class="timeline-list">
+                                    <li><strong>2018:</strong> Pastor Escolar em Salvador (atendimento a 2 colégios).</li>
+                                    <li><strong>2019-2021:</strong> Pastor Distrital em Monte Gordo (Associação Bahia).</li>
+                                    <li><strong>2022-2024:</strong> Pastor Distrital na histórica cidade de Conceição do Jacuípe.</li>
+                                    <li><strong>Atualidade:</strong> Pastor Distrital em Conceição, Feira de Santana (Associação Bahia Central).</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-img-side" data-slot="foto-thomas-ministerio">
+                                <img src="./imagens site/foto-thomas-ministerio.jpeg" alt="Pr. Thomas Magnum ministrando e pregando no púlpito" loading="lazy" class="timeline-img">
+                                <span class="img-caption"><i data-lucide="camera"></i> Pr. Thomas Magnum no exercício ministerial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE ITEM 4 (FAMILY WITH IMAGE SLOT) -->
+                    <div class="timeline-item timeline-with-img fade-in-up">
+                        <div class="timeline-dot">
+                            <i data-lucide="heart"></i>
+                        </div>
+                        <div class="timeline-card flex-card reverse">
+                            <div class="timeline-img-side" data-slot="foto-familia-magnum">
+                                <img src="./imagens site/foto-familia-magnum.jpeg" alt="Família Magnum: Thomas, Maiana, Liz e Lina" loading="lazy" class="timeline-img rounded-glow">
+                                <span class="img-caption"><i data-lucide="users"></i> Família Magnum: Thomas, Maiana, Liz e Lina</span>
+                            </div>
+                            <div class="timeline-content-side">
+                                <div class="badge badge-gold">Base & Abençoado Lar</div>
+                                <h3 class="timeline-title">Família & Ministério Compartilhado</h3>
+                                <p class="timeline-desc">
+                                    A base de todo o trabalho pastoral é o lar. Casado com <strong>Maiana Costa</strong>, parceira no ministério e na vida, é pai carinhoso de duas filhas abençoadas: <strong>Liz</strong> e <strong>Lina</strong>. Juntos, a família Magnum serve com alegria à igreja e às comunidades locais.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TIMELINE ITEM 5 (REAGRUPAMENTO 2026) -->
+                    <div class="timeline-item fade-in-up highlight-timeline">
+                        <div class="timeline-dot bg-gold">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <div class="timeline-card card-accent">
+                            <div class="timeline-year text-gold">2026 — O Reagrupamento das Paixões</div>
+                            <h3 class="timeline-title">Pós-Graduação em Inteligência Artificial para o Ministério</h3>
+                            <p class="timeline-desc">
+                                O início da pós-graduação no IAENE com foco em <strong>Inteligência Artificial voltada para o Ministério Pastoral</strong> reacendeu a paixão pelo código. Utilizando agentes de IA de última geração para acelerar o desenvolvimento de software nas horas vagas, Pr. Thomas desenterrou seu talento tecnológico para colocá-lo 100% a serviço da grande comissão:
+                            </p>
+                            <blockquote class="motto-quote">
+                                <i data-lucide="quote"></i>
+                                <span>"Salvar do pecado e guiar no serviço."</span>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFÓLIO DE SISTEMAS (PROJETOS) -->
+        <section class="section portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-amber">
+                        <i data-lucide="code"></i>
+                        <span>Sistemas para a Missão</span>
+                    </div>
+                    <h2 class="section-title">Portfólio de <span class="text-gradient-gold">Soluções Tecnológicas</span></h2>
+                    <p class="section-subtitle">
+                        Sistemas inteligentes desenvolvidos para transformar a gestão pastoral, o acompanhamento de visitantes e o cuidado com os membros da igreja local.
+                    </p>
+                </div>
+
+                <!-- FEATURED PROJECT 1: RECEPÇÃO ACOLHEDORA -->
+                <div class="featured-project-card fade-in-up">
+                    <div class="project-header-badge">
+                        <span class="badge badge-status"><i data-lucide="check-circle-2"></i> Em Operação / Concluído</span>
+                        <span class="badge badge-tech"><i data-lucide="cpu"></i> Desenvolvido com Suporte de IA</span>
+                    </div>
+
+                    <div class="project-grid">
+                        <div class="project-info">
+                            <h3 class="project-title">Sistema de Recepção Acolhedora</h3>
+                            <p class="project-motto">Central de Frequência, Acompanhamento de Visitantes e Pastoreio Digital</p>
+
+                            <div class="project-block">
+                                <h4><i data-lucide="alert-circle" class="icon-amber"></i> O Problema Resolvido:</h4>
+                                <p>
+                                    Frequentemente, visitantes chegavam às igrejas e saíam sem acompanhamento efetivo por falta de dados estruturados e fichas ágeis. Ao mesmo tempo, membros regulares começavam a se afastar sem que a liderança pastoral e a equipe de recepção percebessem a tempo de intervir relacionalmente.
+                                </p>
+                            </div>
+
+                            <div class="project-block">
+                                <h4><i data-lucide="sparkles" class="icon-gold"></i> Funcionalidades Chave:</h4>
+                                <ul class="project-features-list">
+                                    <li>
+                                        <i data-lucide="qr-code"></i>
+                                        <span><strong>Cadastro Rápido & Leitora:</strong> Registro instantâneo de visitantes e identificação ágil na recepção da igreja.</span>
+                                    </li>
+                                    <li>
+                                        <i data-lucide="users"></i>
+                                        <span><strong>Duplas Missionárias:</strong> Direcionamento automático de visitas para acompanhamento relacional pelas equipes da igreja.</span>
+                                    </li>
+                                    <li>
+                                        <i data-lucide="line-chart"></i>
+                                        <span><strong>Monitoramento de Frequência:</strong> Alertas preventivos de assiduidade para evitar o afastamento de membros.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-glow open-modal-btn" data-img="./imagens site/mockup-recepcao-acolhedora.png" data-title="Sistema de Recepção Acolhedora - Visão Geral do Painel">
+                                    <i data-lucide="maximize-2"></i>
+                                    <span>Expandir Demo do Sistema</span>
+                                </button>
+                                <a href="#contato" class="btn btn-outline">
+                                    <i data-lucide="message-square"></i>
+                                    <span>Solicitar Demonstração</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="project-mockup-wrapper" data-slot="mockup-recepcao-acolhedora">
+                            <div class="mockup-window">
+                                <div class="mockup-header">
+                                    <div class="mockup-dots">
+                                        <span class="dot red"></span>
+                                        <span class="dot yellow"></span>
+                                        <span class="dot green"></span>
+                                    </div>
+                                    <div class="mockup-address">
+                                        <i data-lucide="lock"></i>
+                                        <span>recepcao-acolhedora.igreja.app</span>
+                                    </div>
+                                </div>
+                                <div class="mockup-body" id="mockupBody">
+                                    <img src="./imagens site/mockup-recepcao-acolhedora.png" alt="Interface do Sistema de Recepção Acolhedora" loading="lazy" class="mockup-img">
+                                    <div class="mockup-zoom-overlay">
+                                        <i data-lucide="search"></i>
+                                        <span>Clique para Ampliar</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mockup-caption">
+                                <i data-lucide="layout-dashboard"></i> Painel Geral com métricas de membros, interessados e assiduidade em tempo real.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- UPCOMING / FUTURE PROJECTS PLACEHOLDERS -->
+                <div class="upcoming-projects-header text-center fade-in-up">
+                    <h3>Sistemas em Desenvolvimento & Futuras Soluções</h3>
+                    <p>Iniciativas em andamento utilizando Inteligência Artificial para o pastoreio</p>
+                </div>
+
+                <div class="upcoming-grid">
+                    <div class="upcoming-card fade-in-up">
+                        <div class="upcoming-icon">
+                            <i data-lucide="brain-circuit"></i>
+                        </div>
+                        <span class="upcoming-badge">Em Breve</span>
+                        <h4>Assistente Pastoral IA</h4>
+                        <p>Agente inteligente para apoio na organização de sermões, gestão de agenda pastoral e compilação de estudos bíblicos personalizados.</p>
+                        <div class="upcoming-tags">
+                            <span>IA Generativa</span>
+                            <span>Gestão Pastoral</span>
+                        </div>
+                    </div>
+
+                    <div class="upcoming-card fade-in-up delay-1">
+                        <div class="upcoming-icon">
+                            <i data-lucide="map"></i>
+                        </div>
+                        <span class="upcoming-badge">Em Breve</span>
+                        <h4>Gestor de Pequenos Grupos</h4>
+                        <p>Mapeamento geográfico de PG's, acompanhamento de crescimento espiritual de novos membros e liderança missionária local.</p>
+                        <div class="upcoming-tags">
+                            <span>Geolocalização</span>
+                            <span>Crescimento Espiritual</span>
+                        </div>
+                    </div>
+
+                    <div class="upcoming-card fade-in-up delay-2">
+                        <div class="upcoming-icon">
+                            <i data-lucide="share-2"></i>
+                        </div>
+                        <span class="upcoming-badge">Em Breve</span>
+                        <h4>Evangelismo Digital Hub</h4>
+                        <p>Plataforma para gerenciamento de estudos bíblicos digitais por WhatsApp e captação de interessados nas redes sociais.</p>
+                        <div class="upcoming-tags">
+                            <span>Evangelismo</span>
+                            <span>WhatsApp API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PILARES DO TRABALHO (COMO ATUO) -->
+        <section class="section pilares-section" id="pilares">
+            <div class="container">
+                <div class="section-header text-center">
+                    <div class="badge badge-blue">
+                        <i data-lucide="compass"></i>
+                        <span>Princípios & Filosofia</span>
+                    </div>
+                    <h2 class="section-title">Pilares do <span class="text-gradient-blue">Nosso Trabalho</span></h2>
+                    <p class="section-subtitle">
+                        A visão por trás do desenvolvimento de tecnologia voltada ao serviço sagrado.
+                    </p>
+                </div>
+
+                <div class="pilares-grid">
+                    <div class="pilar-card fade-in-up">
+                        <div class="pilar-icon bg-gold">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+                        <h3>1. Foco em Pastoreio & Salvação</h3>
+                        <p>O código nunca é o fim, mas o meio. Cada linha de programação existe para cuidar de pessoas, fortalecer a igreja e acelerar a pregação do Evangelho.</p>
+                    </div>
+
+                    <div class="pilar-card fade-in-up delay-1">
+                        <div class="pilar-icon bg-blue">
+                            <i data-lucide="bot"></i>
+                        </div>
+                        <h3>2. Desenvolvimento Acelerado por IA</h3>
+                        <p>Uso estratégico de agentes de inteligência artificial de última geração para transformar ideias complexas em sistemas operacionais nas horas vagas.</p>
+                    </div>
+
+                    <div class="pilar-card fade-in-up delay-2">
+                        <div class="pilar-icon bg-amber">
+                            <i data-lucide="church"></i>
+                        </div>
+                        <h3>3. Visão Prática e Ministerial</h3>
+                        <p>Sistemas pensados e desenvolvidos por quem vive o dia a dia, os desafios e as reais dores da liderança da igreja local no distrito.</p>
+                    </div>
+
+                    <div class="pilar-card fade-in-up delay-3">
+                        <div class="pilar-icon bg-emerald">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <h3>4. Excelência Técnica & Segurança</h3>
+                        <p>Construção de aplicações com arquitetura moderna, responsividade total, proteção de dados e facilidade de uso para líderes de todas as idades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BANNER DE CHAMADA / FRASE MARCANTE -->
+        <section class="motto-banner text-center">
+            <div class="container motto-container">
+                <i data-lucide="flame" class="motto-bg-icon"></i>
+                <h2 class="motto-title">"Salvar do pecado e guiar no serviço."</h2>
+                <p class="motto-sub">Colocando o talento e a tecnologia 100% a serviço do Reino de Deus.</p>
+                <div class="motto-cta">
+                    <a href="#contato" class="btn btn-primary btn-lg btn-glow">
+                        <i data-lucide="send"></i>
+                        <span>Entrar em Contato</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO -->
+        <section class="section contato-section" id="contato">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in-up">
+                        <div class="badge badge-amber">
+                            <i data-lucide="mail"></i>
+                            <span>Fale Conosco</span>
+                        </div>
+                        <h2>Vamos Conversar sobre <span class="text-gradient-gold">Tecnologia & Ministério</span></h2>
+                        <p>
+                            Seja para conhecer mais sobre os sistemas desenvolvidos, trocar experiências sobre Inteligência Artificial aplicada ao pastoreio ou parcerias missionárias, será um prazer se conectar.
+                        </p>
+
+                        <div class="contact-methods">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="detail-label">Local de Atuação</span>
+                                    <span class="detail-val">Conceição / Feira de Santana - BA (Associação Bahia Central)</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="church"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="detail-label">Função</span>
+                                    <span class="detail-val">Pastor Distrital (IASD) & Analista de Sistemas</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="sparkles"></i>
+                                </div>
+                                <div class="contact-detail">
+                                    <span class="detail-label">Especialização Atual</span>
+                                    <span class="detail-val">Pós-Graduando em IA Pastoral (IAENE)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="#" class="social-btn" title="WhatsApp" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                            <a href="#" class="social-btn" title="Instagram" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                            <a href="#" class="social-btn" title="GitHub" aria-label="GitHub"><i data-lucide="github"></i></a>
+                            <a href="#" class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card fade-in-up delay-1">
+                        <h3>Enviar uma Mensagem</h3>
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="name">Seu Nome</label>
+                                <div class="input-icon-wrapper">
+                                    <i data-lucide="user"></i>
+                                    <input type="text" id="name" required placeholder="Digite seu nome completo">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Seu E-mail ou Telefone</label>
+                                <div class="input-icon-wrapper">
+                                    <i data-lucide="mail"></i>
+                                    <input type="text" id="email" required placeholder="exemplo@email.com ou (75) 99999-9999">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Assunto</label>
+                                <div class="input-icon-wrapper">
+                                    <i data-lucide="tag"></i>
+                                    <select id="subject">
+                                        <option value="recepcao">Dúvida / Demonstração do Sistema Recepção Acolhedora</option>
+                                        <option value="ia">Troca de ideias sobre IA no Ministério</option>
+                                        <option value="pastoral">Contato Pastoral</option>
+                                        <option value="outro">Outro assunto</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensagem</label>
+                                <textarea id="message" rows="4" required placeholder="Como posso te ajudar?"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block btn-glow">
+                                <i data-lucide="send"></i>
+                                <span>Enviar Mensagem</span>
+                            </button>
+                        </form>
+                        <div id="formFeedback" class="form-feedback hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#hero" class="nav-logo">
+                    <div class="logo-icon-wrapper">
+                        <i data-lucide="cross" class="logo-cross-icon"></i>
+                        <i data-lucide="code-2" class="logo-code-icon"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-name">Thomas Magnum</span>
+                        <span class="logo-title">Pastor & Systems Analyst</span>
+                    </div>
+                </a>
+                <p class="footer-motto">"Salvar do pecado e guiar no serviço."</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Minha História</a></li>
+                    <li><a href="#portfolio">Sistemas & IA</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Projetos</h4>
+                <ul>
+                    <li><a href="#portfolio">Recepção Acolhedora</a></li>
+                    <li><a href="#portfolio">Assistente Pastoral IA</a></li>
+                    <li><a href="#portfolio">Gestor de PG's</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 Pr. Thomas Magnum. Todos os direitos reservados. IASD Distrito Conceição / Feira de Santana.</p>
+                <p class="powered-by"><i data-lucide="sparkles"></i> Desenvolvido com IA & Propósito</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL / LIGHTBOX FOR MOCKUPS AND PHOTOS -->
+    <div class="modal" id="imageModal">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <div class="modal-content-container">
+            <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fechar Modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-body">
+                <img src="" alt="Ampliação de imagem" id="modalImg" class="modal-img">
+                <div class="modal-caption" id="modalCaption"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
