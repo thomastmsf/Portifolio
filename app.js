@@ -187,42 +187,94 @@ function initModal() {
 }
 
 /* ==========================================
-   6. CONTACT FORM SUBMISSION FEEDBACK
+   6. REAL CONTACT FORM SUBMISSION & WHATSAPP
    ========================================== */
-function handleFormSubmit(event) {
+async function handleFormSubmit(event) {
     event.preventDefault();
 
     const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subjectSelect = document.getElementById('subject');
+    const subject = subjectSelect ? subjectSelect.options[subjectSelect.selectedIndex].text : 'Contato Geral';
+    const message = document.getElementById('message').value;
+
     const feedback = document.getElementById('formFeedback');
     const form = document.getElementById('contactForm');
     const submitBtn = form.querySelector('button[type="submit"]');
 
-    // Simulate sending loading state
     const originalBtnHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
     submitBtn.innerHTML = `
-        <div class="spinner"></div>
-        <span>Enviando...</span>
+        <span class="spinner"></span>
+        <span>Enviando mensagem...</span>
     `;
 
-    setTimeout(() => {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnHTML;
+    try {
+        // Send real email to thomas.tmsf@gmail.com using FormSubmit API
+        const response = await fetch('https://formsubmit.co/ajax/thomas.tmsf@gmail.com', {
+            method: 'POST',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: `Novo Contato do Site: ${subject} (${name})`,
+                _template: 'table',
+                "Nome do Remetente": name,
+                "Contato / E-mail": email,
+                "Assunto": subject,
+                "Mensagem": message
+            })
+        });
+
+        const data = await response.json();
+
+        if (response.ok || data.success === "true" || data.success === true) {
+            feedback.className = 'form-feedback success';
+            feedback.innerHTML = `
+                <strong><i data-lucide="check-circle-2"></i> Mensagem Enviada com Sucesso!</strong><br>
+                Obrigado, ${name}! Sua mensagem foi enviada diretamente para o e-mail do Pr. Thomas (<strong>thomas.tmsf@gmail.com</strong>).
+            `;
+            form.reset();
+        } else {
+            throw new Error(data.message || 'Falha no envio.');
+        }
+    } catch (err) {
+        console.warn('Tentando envio via cliente de e-mail...', err);
+        // Fallback: Mailto link if offline or blocked
+        const mailtoUrl = `mailto:thomas.tmsf@gmail.com?subject=${encodeURIComponent('Contato via Site: ' + subject)}&body=${encodeURIComponent(`Nome: ${name}\nContato: ${email}\n\nMensagem:\n${message}`)}`;
+        window.location.href = mailtoUrl;
 
         feedback.className = 'form-feedback success';
         feedback.innerHTML = `
-            <strong><i data-lucide="check-circle-2"></i> Mensagem Enviada com Sucesso!</strong><br>
-            Obrigado, ${name}! Pr. Thomas Magnum recebeu seu contato e responderá em breve.
+            <strong><i data-lucide="mail"></i> Cliente de E-mail Acionado!</strong><br>
+            Redirecionando para seu aplicativo de e-mail para enviar diretamente para <strong>thomas.tmsf@gmail.com</strong>.
         `;
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
         feedback.classList.remove('hidden');
-
-        // Re-render icons if needed
         if (window.lucide) lucide.createIcons();
-
-        form.reset();
 
         setTimeout(() => {
             feedback.classList.add('hidden');
-        }, 8000);
-    }, 1200);
+        }, 10000);
+    }
+}
+
+function sendViaWhatsApp() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subjectSelect = document.getElementById('subject');
+    const subject = subjectSelect ? subjectSelect.options[subjectSelect.selectedIndex].text : '';
+    const message = document.getElementById('message').value;
+
+    if (!name || !message) {
+        alert('Por favor, preencha pelo menos seu Nome e a Mensagem para enviar pelo WhatsApp.');
+        return;
+    }
+
+    const text = `*Contato do Site - Pr. Thomas Magnum*\n\n*Nome:* ${name}\n*Contato:* ${email || 'Não informado'}\n*Assunto:* ${subject}\n\n*Mensagem:*\n${message}`;
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
 }

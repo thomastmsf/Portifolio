@@ -1495,10 +1495,38 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.form-feedback.success {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34D399;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+.contact-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.btn-whatsapp {
+    border-color: rgba(37, 211, 102, 0.4);
+    color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: #25D366;
+    color: #25D366;
+    transform: translateY(-2px);
+}
+
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #FFFFFF;
+    animation: spin 0.8s linear infinite;
+    margin-right: 6px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
 }
 
 .hidden { display: none; }
