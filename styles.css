@@ -879,9 +879,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-accent {
-    border-color: var(--border-highlight);
-    background: linear-gradient(135deg, rgba(14, 23, 44, 0.9) 0%, rgba(26, 41, 74, 0.9) 100%);
-    box-shadow: var(--shadow-glow-gold);
+    border: 1px solid var(--gold-accent-light);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2) 0%, rgba(37, 99, 235, 0.25) 100%);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 25px rgba(245, 158, 11, 0.3);
+}
+
+[data-theme="light"] .card-accent {
+    background: linear-gradient(135deg, #FEF3C7 0%, #E0F2FE 100%);
+    border-color: #F59E0B;
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.2);
+}
+
+.upcoming-grid.single-project {
+    grid-template-columns: 1fr;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.featured-upcoming {
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(245, 158, 11, 0.12) 100%);
+    border: 1.5px solid var(--border-highlight);
+    box-shadow: var(--shadow-md);
+    padding: 2.2rem;
+    border-radius: var(--radius-xl);
+}
+
+.upcoming-header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
 }
 
 .motto-quote {
