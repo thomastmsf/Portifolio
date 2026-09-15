@@ -153,15 +153,19 @@ function initModal() {
         document.body.style.overflow = '';
     }
 
-    // Attach to mockup click
-    if (mockupBody) {
-        mockupBody.addEventListener('click', () => {
-            const img = mockupBody.querySelector('img');
+    // Attach to all mockup image clicks
+    const mockupBodies = document.querySelectorAll('.mockup-body');
+    mockupBodies.forEach(mb => {
+        mb.addEventListener('click', () => {
+            const img = mb.querySelector('img');
+            const card = mb.closest('.featured-project-card');
+            const titleBtn = card ? card.querySelector('.open-modal-btn') : null;
+            const caption = titleBtn ? titleBtn.getAttribute('data-title') : (img ? img.alt : 'Demonstração de Sistema');
             if (img) {
-                openModal(img.src, 'Sistema de Recepção Acolhedora - Central de Frequência e Recepção');
+                openModal(img.src, caption);
             }
         });
-    }
+    });
 
     // Attach to explicit modal trigger buttons
     openModalBtns.forEach(btn => {
